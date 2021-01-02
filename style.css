@@ -1,0 +1,250 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;
+    background: url(./images/bg-top.svg) no-repeat;
+    background-position: top right -13em;
+    background-color: hsl(240, 78%, 98%);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    width: 100%;
+    height: 100%;
+}
+
+.main-container {
+    margin: 3em 2em;
+}
+
+.title {
+    margin-bottom: 3em;
+    text-align: center;
+    color: hsl(233, 13%, 49%);
+}
+
+.btn--toggle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.text--lightgrey {
+    color: hsl(234, 14%, 74%);
+}
+
+.switch {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 4em;
+    height: 2.27em;
+    border-radius: 1.2em;
+    background: linear-gradient(to top left, hsl(237, 63%, 64%), hsl(236, 72%, 79%));
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0 2.4em;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.switch:hover {
+    opacity: 0.7;
+}
+
+.slider--round::before {
+    position: absolute;
+    content: "";
+    border-radius: 5em;
+    height: 1.7em;
+    width: 1.7em;
+    left: 0.39em;
+    bottom: 0.3em;
+    background-color: white;
+    transition: 0.4s;
+}
+
+input:checked+.slider--round::before {
+    transform: translateX(23px);
+}
+
+.cards {
+    border-radius: 0.5em;
+    box-sizing: border-box;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    color: hsl(233, 13%, 49%);
+    text-align: center;
+    padding: 2em;
+    margin: 2em 0;
+    width: 100%;
+    max-width: 30em;
+}
+
+.description>* {
+    padding: 0.5em;
+}
+
+.options>* {
+    padding: 1em;
+}
+
+.white-card {
+    background-color: white;
+}
+
+.blue-card {
+    color: white;
+    background: linear-gradient(to top left, hsl(237, 63%, 64%), hsl(236, 72%, 79%));
+    z-index: 1;
+}
+
+.prices {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: hsl(232, 13%, 33%);
+    font-size: 3.5em;
+}
+
+.blue-card .prices {
+    color: white;
+}
+
+.currency {
+    font-size: 0.5em;
+    margin-right: 0.3em;
+}
+
+.options>p {
+    border: 1px solid;
+    border-left: none;
+    border-right: none;
+    border-color: hsl(234, 14%, 74%);
+}
+
+.options p:nth-child(2),
+.options p:nth-child(3) {
+    border-top: none;
+}
+
+.blue-card .options p {
+    border-color: hsl(236, 72%, 79%);
+}
+
+.btn--blue,
+.btn--white {
+    border: none;
+    border-radius: 0.3em;
+    width: 100%;
+    margin-top: 1.5em;
+    padding: 1.3em 0;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.btn--blue:hover,
+.btn--white:hover {
+    opacity: 0.7;
+}
+
+.btn--blue {
+    background: linear-gradient(90deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+}
+
+.btn--blue:active {
+    border: 1px solid hsl(237, 63%, 64%);
+    background: none;
+    background-color: transparent;
+    color: hsl(237, 63%, 64%);
+}
+
+.btn--white {
+    background: none;
+    background-color: white;
+    color: hsl(237, 63%, 64%);
+}
+
+.btn--white:active {
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+}
+
+.attribution {
+    position: absolute;
+    bottom: -2;
+    font-size: 11px;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 768px) {
+    body {
+        background: url(./images/bg-bottom.svg) bottom left no-repeat, url(./images/bg-top.svg) top right no-repeat;
+    }
+
+    .cards {
+        margin: 2em auto;
+    }
+}
+
+@media (min-width: 1280px) {
+    .cards-box {
+        display: grid;
+        grid-template-columns: 28% 25% 28%;
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+        margin-top: 4em;
+    }
+
+    .cards {
+        animation: none;
+        width: auto;
+        margin: 0;
+    }
+
+    .white-card {
+        margin: 2em 0em;
+    }
+
+    #card-one {
+        animation: slideOutLeft 2s ease;
+    }
+
+    #card-three {
+        animation: slideOutRight 2s ease;
+    }
+
+    @keyframes slideOutLeft {
+        0% {
+            transform: translateX(15em);
+        }
+
+        100% {
+            transform: translate(0);
+        }
+    }
+
+    @keyframes slideOutRight {
+        0% {
+            transform: translateX(-15em);
+        }
+
+        100% {
+            transform: translate(0);
+        }
+    }
+}

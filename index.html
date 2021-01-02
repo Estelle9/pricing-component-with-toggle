@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Pricing component</title>
+</head>
+
+<body>
+  <div class="main-container">
+    <div class="container">
+      <div class="title">
+        <h1>Our Pricing</h1>
+      </div>
+      <div class="btn--toggle">
+        <p class="text--lightgrey">Annually</p>
+        <label for="toggle" class="switch">
+          <input type="checkbox" id="toggle" class="checkbox" onclick="toggleActivate()"/>
+          <span class="slider--round"></span>
+        </label>
+        <p class="text--lightgrey">Monthly</p>
+      </div>
+    </div>
+    <div class="cards-box">
+      <div id="card-one" class="cards white-card">
+        <div class="description">
+          <div class="offer">
+            <p>Basic</p>
+          </div>
+          <div class="prices">
+            <p class="currency">&dollar;</p>
+            <p class="annually">199.99</p>
+            <p class="monthly">19.99</p>
+          </div>
+          <div class="options">
+            <p>500 GB Storage</p>
+            <p>2 Users Allowed</p>
+            <p>Send up to 3 GB</p>
+          </div>
+          <div class="btn">
+            <button type="button" class="btn--blue">
+              Learn More
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="card-two" class="cards blue-card">
+        <div class="description">
+          <div class="offer">
+            <p>Professional</p>
+          </div>
+          <div class="prices">
+            <p class="currency">&dollar;</p>
+            <p class="annually">249.99</p>
+            <p class="monthly">24.99</p>
+          </div>
+          <div class="options">
+            <p>1 TB Storage</p>
+            <p>5 Users Allowed</p>
+            <p>Send up to 10 GB</p>
+          </div>
+          <div class="btn">
+            <button type="button" class="btn--white">
+              Learn More
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="card-three" class="cards white-card">
+        <div class="description">
+          <div class="offer">
+            <p>Master</p>
+          </div>
+          <div class="prices">
+            <p class="currency">&dollar;</p>
+            <p class="annually">399.99</p>
+            <p class="monthly">39.99</p>
+          </div>
+          <div class="options">
+            <p>2 TB Storage</p>
+            <p>10 Users Allowed</p>
+            <p>Send up to 20 GB</p>
+          </div>
+          <div class="btn">
+            <button class="btn--blue">
+              Learn More
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Estelle</a>.
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
