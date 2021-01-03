@@ -152,6 +152,7 @@ input:checked+.slider--round::before {
     text-transform: uppercase;
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
+    outline: hsl(237, 63%, 64%);
 }
 
 .btn--blue:hover,
