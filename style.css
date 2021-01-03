@@ -162,6 +162,7 @@ input:checked+.slider--round::before {
 .btn--blue:focus,
 .btn--white:focus {
     outline: 2px solid hsl(237, 63%, 64%);
+    border-radius: 0.3em;
 }
 
 .btn--blue {
