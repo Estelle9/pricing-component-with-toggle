@@ -30,6 +30,7 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .text--lightgrey {
@@ -150,6 +151,7 @@ input:checked+.slider--round::before {
     letter-spacing: 0.2em;
     text-transform: uppercase;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .btn--blue:hover,
