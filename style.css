@@ -152,12 +152,16 @@ input:checked+.slider--round::before {
     text-transform: uppercase;
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
-    outline: 2px solid hsl(237, 63%, 64%);
 }
 
 .btn--blue:hover,
 .btn--white:hover {
     opacity: 0.7;
+}
+
+.btn--blue:focus,
+.btn--white:focus {
+    outline: 2px solid hsl(237, 63%, 64%);
 }
 
 .btn--blue {
